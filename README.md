@@ -13,7 +13,7 @@
 
 ---
 
-## written analysis of the RabbitMQ configuration issues
+## Written analysis of the RabbitMQ configuration issues
 
 ---
 
