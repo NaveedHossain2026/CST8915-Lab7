@@ -17,11 +17,11 @@
 
 ### 1. Is RabbitMQ Stateless or Stateful?
 
-RabbitMQ is a Stateful application. This means that, unlike a stateless web server (like the store front), which simply processes requests, RabbitMQ has the task of holding data (messages, configurations of the exchange, and queues). In order for RabbitMQ to function correctly, it has to remember the state of the messages it handles, even if the process is stopped.
+RabbitMQ is a Stateful application. This means that, unlike a stateless web server (like the store front), which simply processes requests, RabbitMQ has the task of holding data (messages, orders, and queues). In order for RabbitMQ to function correctly, it has to remember the state of the messages it handles, even if the process is stopped.
 
 ### 2. The implications of running RabbitMQ without persistent storage
 
-Running RabbitMQ without persistent storage in Kubernetes effectively treats it as a stateless service, posing critical risks to data integrity. Kubernetes pods use temporary storage by default, and any messages, orders, and queue configurations are lost in case the pod crashes and restarts. A new pod will have no data when it starts, leading to the permanent loss of messages that are not yet processed.
+Running RabbitMQ without persistent storage in Kubernetes effectively treats it as a stateless service, posing critical risks to data integrity. Kubernetes pods use temporary storage by default, and any messages, orders, and queue configurations are lost if the pod crashes and restarts. A new pod will have no data when it starts, leading to the permanent loss of messages that are not yet processed.
 
 
 ### 3. What happens when the RabbitMQ pod is deleted or restarted
