@@ -42,4 +42,4 @@ Yes, using Azure Service Bus does solve the issues identified with the RabbitMQ 
 
 ## Acknowledgments
 
-I used Gemini to troubleshoot errors and resolve technical blockers during the lab.
+I used Gemini to troubleshoot errors during the lab and to help with background research for the written analysis.
